@@ -15,6 +15,8 @@
         this.overlayContainer = d.querySelector('.container');
         this.navElements = d.querySelectorAll('nav.content li a');
         this.slideShowHeader = d.querySelector('.overlay h1');
+        this.workSlidesLength = d.querySelectorAll('#work .luminous').length;
+        this.headerHeight = parseInt(w.getComputedStyle(d.querySelector('header')).height);
     }
 
     Main.prototype.removeClass = function(elements, cssClass, attr) {
@@ -67,10 +69,10 @@
         slice.call(navElements).forEach(function (ele) {
             ele.addEventListener('click', function (e) {
                 var id = this.getAttribute('href'),
-                    section = d.querySelector('#' + id);
-                Velocity(section, 'scroll', {  
-                    duration:700 
-                });
+                    section = d.querySelector('#' + id),
+                    top = section.getBoundingClientRect().top + w.scrollY,
+                    whereToGo = (top < that.headerHeight) ? 0 : top - that.headerHeight;
+                Velocity(d.documentElement, 'scroll', { offset: whereToGo+'px', duration:700 });    
                 e.preventDefault();
             }, false);
         });
@@ -132,7 +134,7 @@
                 newSlideIndex = slides[currentSlideIndex + 1] === undefined ? 0 : currentSlideIndex + 1;
             }
             
-            that.slideShowHeader.innerHTML = (newSlideIndex > 8 ) ? "Projects" : "Work";
+            that.slideShowHeader.innerHTML = (newSlideIndex >= that.workSlidesLength) ? "Projects" : "Work";
             currentSlide = slides[currentSlideIndex];
             newSlide = slides[newSlideIndex];
 	   }
@@ -163,7 +165,7 @@
         
         function addRemoveClasses (index) {
            currentSlideIndex = index;
-           that.slideShowHeader.innerHTML = (index > 8 ) ? "Projects" : "Work";
+           that.slideShowHeader.innerHTML = (index > 7 ) ? "Projects" : "Work";
            that.addClass(slides, 'inactive');
            that.removeClass(slides[index], 'inactive');
            that.addClass(that.overlay, 'open');

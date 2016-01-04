@@ -13,31 +13,59 @@ header {
   min-height: 3.3rem;
   background: #8f8e8e;
   width: 100%; }
+  @media (max-width: 768px) {
+    header {
+      min-height: 2rem; } }
   header nav {
     text-align: right;
     margin-top: .75rem;
     padding-top: 0 !important; }
+    @media (max-width: 768px) {
+      header nav {
+        width: 100% !important;
+        text-align: left;
+        margin-top: .5rem;
+        margin-left: 0 !important; }
+        header nav ul {
+          padding-left: 0;
+          margin-left: 0; } }
     header nav li {
       display: inline-block;
       margin-left: 2rem;
       list-style: none; }
+      @media (max-width: 768px) {
+        header nav li {
+          margin-left: 1rem; } }
       header nav li a {
         color: white;
         font-size: 1.1rem;
         text-transform: uppercase; }
+        @media (max-width: 768px) {
+          header nav li a {
+            font-size: .95rem !important; } }
 
 h1 {
   font-size: 4rem;
   margin: 0; }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem; } }
 
 h2 {
   font-size: 3rem;
   margin: 0; }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.2rem; } }
 
 p {
   line-height: 2rem;
   width: 100%;
   max-width: 1200px; }
+  @media (max-width: 768px) {
+    p {
+      line-height: 1.2rem;
+      font-size: .8rem; } }
 
 section {
   height: 100vh; }
@@ -46,6 +74,9 @@ section {
   background: #f00088; }
   #about > div {
     padding-top: 10vh; }
+    @media (max-width: 768px) {
+      #about > div {
+        padding-top: 1vh; } }
     #about > div h1 {
       margin-top: 5rem; }
 
@@ -62,11 +93,20 @@ section {
   width: 80%;
   margin-left: 10%;
   padding-top: 10vh; }
+  @media (max-width: 768px) {
+    .content {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%; } }
   .content ul li {
     margin-bottom: .6rem;
     margin-top: .6rem; }
     .content ul li a {
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      width: 80%; }
+      @media (max-width: 768px) {
+        .content ul li a {
+          font-size: .92rem; } }
 
 .active {
   text-decoration: underline; }
@@ -100,6 +140,10 @@ Overly styles
   color: transparent;
   outline: none;
   z-index: 100; }
+  @media (max-width: 768px) {
+    .overlay .overlay-close {
+      width: 30px;
+      height: 30px; } }
 
 .overlay-door {
   visibility: hidden;
@@ -146,10 +190,17 @@ Overly styles
       margin: 12px 7.5%;
       width: 35%;
       max-width: 350px; }
+      @media (max-width: 768px) {
+        .container .slide .otherSlides {
+          display: none; } }
     .container .slide .description {
       float: left;
       margin: 0 7.5% 0 0;
       width: 40%; }
+      @media (max-width: 768px) {
+        .container .slide .description {
+          width: 75%;
+          margin-left: 12.5%; } }
       .container .slide .description p {
         margin: 0; }
   .container .slideshow-control {
@@ -172,6 +223,11 @@ Overly styles
     opacity: 0.3;
     position: absolute;
     top: 50%; }
+    @media (max-width: 768px) {
+      .container .slideshow-control .slideshow-left-arrow {
+        top: 40%;
+        height: 40%;
+        left: 5px; } }
   .container .slideshow-control .slideshow-right-arrow {
     right: 0;
     height: 60%;
@@ -179,3 +235,8 @@ Overly styles
     opacity: 0.3;
     position: absolute;
     top: 50%; }
+    @media (max-width: 768px) {
+      .container .slideshow-control .slideshow-right-arrow {
+        top: 40%;
+        height: 40%;
+        right: 5px; } }
