@@ -70,9 +70,9 @@
             ele.addEventListener('click', function (e) {
                 var id = this.getAttribute('href'),
                     section = d.querySelector('#' + id),
-                    top = section.getBoundingClientRect().top + w.scrollY,
+                    top = section.getBoundingClientRect().top + w.pageYOffset,
                     whereToGo = (top < that.headerHeight) ? 0 : top - that.headerHeight;
-                Velocity(d.documentElement, 'scroll', { offset: whereToGo+'px', duration:700 });    
+                Velocity(d.documentElement, 'scroll', { offset: whereToGo+'px', duration:700, mobileHA: false });    
                 e.preventDefault();
             }, false);
         });
