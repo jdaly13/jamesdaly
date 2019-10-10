@@ -168,7 +168,7 @@
            that.slideShowHeader.innerHTML = (index > 7 ) ? "Projects" : "Work";
            that.addClass(slides, 'inactive');
            that.removeClass(slides[index], 'inactive');
-           that.addClass(that.overlay, 'open');
+           that.addClass(that.overlay, 'open').removeClass(that.overlay, 'close');
            that.removeClass(that.overlayContainer, 'hide').removeClass(that.closeButton, 'hide');
         }
         
@@ -195,7 +195,7 @@
     Main.prototype.close = function () {
         var that = this;
         this.closeButton.addEventListener('click', function () {
-            that.removeClass(that.overlay, 'open').removeClass(that.slides, 'inactive', 'style');
+            that.addClass(that.overlay, 'close').removeClass(that.slides, 'inactive', 'style').removeClass(that.overlay, 'open');
             that.addClass(that.overlayContainer, 'hide').addClass(this, 'hide');
         }, false);
     };
