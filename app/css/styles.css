@@ -187,6 +187,8 @@ Overly styles
     .container .slide h3 {
       text-align: center;
       text-transform: uppercase; }
+    .container .slide img {
+      width: 100%; }
     .container .slide .otherSlides {
       float: left;
       margin: 12px 7.5%;
