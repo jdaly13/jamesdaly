@@ -13,3 +13,5 @@ application deployed to jamesdaly.surge.sh
 ## MISC
 
 instead of updaing gulp - I'm directly editing `styles.css`
+
+last pushed 8/24/2024
