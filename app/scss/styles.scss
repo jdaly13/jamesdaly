@@ -1,92 +1,87 @@
 // styles.scss
-//variables 
+//variables
 $pink: #f00088;
 $blue: #161b3a;
 $gray: #8f8e8e;
-$cabin: 'Cabin', sans-serif;
-$candal: 'Candal', sans-serif;
+$cabin: "Cabin", sans-serif;
+$candal: "Candal", sans-serif;
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
 $desktop: "(min-width: 1024px)";
 $phone: "(max-width: 768px)";
 
-
-
 * {
     text-decoration: none;
     box-sizing: border-box;
-    color:white;
+    color: white;
     font-family: $cabin;
-    font-size:1rem;
+    font-size: 1rem;
 }
 
-.block{
-    display:block;
+.block {
+    display: block;
 }
 
 header {
-    position:fixed;
-    min-height:3.3rem;
+    position: fixed;
+    min-height: 3.3rem;
     background: $gray;
-    width:100%;
-    
+    width: 100%;
+
     @media #{$phone} {
-        min-height:2rem;
+        min-height: 2rem;
     }
-    
+
     nav {
         text-align: right;
-        margin-top:.75rem;
-        padding-top:0!important;
-        
+        margin-top: 0.75rem;
+        padding-top: 0 !important;
+
         @media #{$phone} {
             ul {
-                padding-left:0;
-                margin-left:0;
-                
+                padding-left: 0;
+                margin-left: 0;
             }
-            width:100% !important;
+            width: 100% !important;
             text-align: left;
-            margin-top:.5rem;
+            margin-top: 0.5rem;
             margin-left: 0 !important;
         }
-        
+
         li {
             display: inline-block;
             margin-left: 2rem;
             list-style: none;
-            
+
             @media #{$phone} {
                 margin-left: 1rem;
             }
-            
+
             a {
                 color: white;
-                font-size:1.1rem;
+                font-size: 1.1rem;
                 text-transform: uppercase;
-                
+
                 @media #{$phone} {
-                    font-size:.95rem !important;
+                    font-size: 0.95rem !important;
                 }
             }
         }
     }
-    
-
 }
 
 h1 {
-    font-size:4rem;
-    margin:0;
-    
+    font-size: 4rem;
+    margin: 0;
+
     @media #{$phone} {
         font-size: 2rem;
     }
 }
 
 h2 {
-    font-size:3rem;
-    margin:0;
-    
+    font-size: 3rem;
+    margin: 0;
+
     @media #{$phone} {
         font-size: 1.2rem;
     }
@@ -94,28 +89,28 @@ h2 {
 
 p {
     line-height: 2rem;
-    width:100%;
-    max-width:1200px;
-    
+    width: 100%;
+    max-width: 1200px;
+
     @media #{$phone} {
-        line-height: 1.2rem;
-        font-size:.8rem;
+        line-height: 1.8rem;
+        font-size: 1rem;
     }
 }
 
 section {
-    height:100vh;
+    height: 100vh;
 }
 
 #about {
     background: $pink;
     > div {
-        padding-top:10vh;
+        padding-top: 10vh;
         @media #{$phone} {
-            padding-top:1vh;
+            padding-top: 1vh;
         }
         h1 {
-           margin-top: 5rem;
+            margin-top: 5rem;
         }
     }
 }
@@ -133,25 +128,25 @@ section {
 }
 
 .content {
-    width:80%;
-    margin-left:10%;
-    padding-top:10vh;
-    
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 10vh;
+
     @media #{$phone} {
-        width:90%;
-        margin-left:5%;
-        margin-right:5%;
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
     }
-    
+
     ul {
         li {
-            margin-bottom:.6rem;
-            margin-top:.6rem;
+            margin-bottom: 0.6rem;
+            margin-top: 0.6rem;
             a {
-               font-size:1.2rem;
-                width:80%;
+                font-size: 1.2rem;
+                width: 80%;
                 @media #{$phone} {
-                    font-size:.92rem;
+                    font-size: 0.92rem;
                 }
             }
         }
@@ -173,157 +168,158 @@ Overly styles
 
 .overlay {
     position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(10,20,30,0.9);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(10, 20, 30, 0.9);
     z-index: 1000;
 }
 
 .overlay .overlay-close {
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	overflow: hidden;
-	border: none;
-	background: url(../img/cross.png) no-repeat center center;
-	text-indent: 200%;
-	color: transparent;
-	outline: none;
-	z-index: 100;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../img/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
     @media #{$phone} {
-        width:30px;
-        height:30px;
+        width: 30px;
+        height: 30px;
     }
 }
 
 .overlay-door {
-	visibility: hidden;
-	width: 0;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-
+    visibility: hidden;
+    width: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
 .overlay-door.close {
-    transition: visibility 0s .8s, width 0.5s 0.3s;
-    -webkit-transition: visibility 0s .8s, width 0.5s 0.3s;
+    transition: visibility 0s 0.8s, width 0.5s 0.3s;
+    -webkit-transition: visibility 0s 0.8s, width 0.5s 0.3s;
 }
 
 .overlay-door.open {
-	visibility: visible;
-	width: 100%;
-	-webkit-transition: width 0.5s, visibility 0s;
-	transition: width 0.5s, visibility 0s;
+    visibility: visible;
+    width: 100%;
+    -webkit-transition: width 0.5s, visibility 0s;
+    transition: width 0.5s, visibility 0s;
 }
 
 .container {
-    position:absolute;
-    overflow:hidden;
+    position: absolute;
+    overflow: hidden;
     max-width: 1000px;
-    margin:auto;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    height:500px;
-    border:2px solid white;
-    background-color:black;
-    
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 500px;
+    border: 2px solid white;
+    background-color: black;
+
     h1 {
         text-align: center;
     }
-    
+
     .slide {
         position: absolute;
-        width:100%;
-        top:15%;
-        height:85%;
-        
+        width: 100%;
+        top: 15%;
+        height: 85%;
+
         &.inactive {
-            display:none;
+            display: none;
         }
-        
+
         h3 {
             text-align: center;
             text-transform: uppercase;
         }
 
         img {
-            width:100%;
+            width: 100%;
         }
-        
+
         .otherSlides {
-            float:left;
+            float: left;
             margin: 12px 7.5%;
-            width:35%;
+            width: 35%;
             max-width: 350px;
-            
+
             @media #{$phone} {
-                display:none;
+                display: none;
             }
         }
-        
+
         .description {
-            float:left;
-            margin:0 7.5% 0 0;
-            width:40%;
-            
+            float: left;
+            margin: 0 7.5% 0 0;
+            width: 40%;
+
             @media #{$phone} {
-                width:75%;
-                margin-left:12.5%;
+                width: 75%;
+                margin-left: 12.5%;
             }
-            
-            p{
-                margin:0;
+
+            p {
+                margin: 0;
             }
         }
     }
-    
-        /* controls */
+
+    /* controls */
     .slideshow-control {
-      height: 100%;
-      cursor: pointer;
-      position: absolute;
-      top: 0;
-      width: 10%;
-      z-index: 1; }
-      .slideshow-control.slideshow-left-control {
-        left: -10px; }
-      .slideshow-control.slideshow-right-control {
-        right: -10px; }
-      .slideshow-control:hover .slideshow-arrow {
-        opacity: 0.7; }
-      .slideshow-control .slideshow-left-arrow {
+        height: 100%;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        width: 10%;
+        z-index: 1;
+    }
+    .slideshow-control.slideshow-left-control {
+        left: -10px;
+    }
+    .slideshow-control.slideshow-right-control {
+        right: -10px;
+    }
+    .slideshow-control:hover .slideshow-arrow {
+        opacity: 0.7;
+    }
+    .slideshow-control .slideshow-left-arrow {
         left: 0;
         height: 60%;
         margin-top: -150%;
         opacity: 0.3;
         position: absolute;
-        top: 50%; 
+        top: 50%;
         @media #{$phone} {
-            top:40%;
-            height:40%;
-            left:5px;
+            top: 40%;
+            height: 40%;
+            left: 5px;
         }
-      
-      }
-      .slideshow-control .slideshow-right-arrow {
+    }
+    .slideshow-control .slideshow-right-arrow {
         right: 0;
         height: 60%;
         margin-top: -150%;
         opacity: 0.3;
         position: absolute;
-        top: 50%; 
+        top: 50%;
         @media #{$phone} {
-            top:40%;
-            height:40%;
-            right:5px;
+            top: 40%;
+            height: 40%;
+            right: 5px;
         }
-      }
-    
+    }
 }

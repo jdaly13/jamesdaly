@@ -1,246 +1,324 @@
 * {
-  text-decoration: none;
-  box-sizing: border-box;
-  color: white;
-  font-family: "Cabin", sans-serif;
-  font-size: 1rem; }
+    text-decoration: none;
+    box-sizing: border-box;
+    color: white;
+    font-family: "Cabin", sans-serif;
+    font-size: 1rem;
+}
 
 .block {
-  display: block; }
+    display: block;
+}
 
 header {
-  position: fixed;
-  min-height: 3.3rem;
-  background: #8f8e8e;
-  width: 100%; }
-  @media (max-width: 768px) {
+    position: fixed;
+    min-height: 3.3rem;
+    background: #8f8e8e;
+    width: 100%;
+}
+@media (max-width: 768px) {
     header {
-      min-height: 2rem; } }
-  header nav {
+        min-height: 2rem;
+    }
+}
+header nav {
     text-align: right;
-    margin-top: .75rem;
-    padding-top: 0 !important; }
-    @media (max-width: 768px) {
-      header nav {
+    margin-top: 0.75rem;
+    padding-top: 0 !important;
+}
+@media (max-width: 768px) {
+    header nav {
         width: 100% !important;
         text-align: left;
-        margin-top: .5rem;
-        margin-left: 0 !important; }
-        header nav ul {
-          padding-left: 0;
-          margin-left: 0; } }
+        margin-top: 0.5rem;
+        margin-left: 0 !important;
+    }
+    header nav ul {
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+header nav li {
+    display: inline-block;
+    margin-left: 2rem;
+    list-style: none;
+}
+@media (max-width: 768px) {
     header nav li {
-      display: inline-block;
-      margin-left: 2rem;
-      list-style: none; }
-      @media (max-width: 768px) {
-        header nav li {
-          margin-left: 1rem; } }
-      header nav li a {
-        color: white;
-        font-size: 1.1rem;
-        text-transform: uppercase; }
-        @media (max-width: 768px) {
-          header nav li a {
-            font-size: .95rem !important; } }
+        margin-left: 1rem;
+    }
+}
+header nav li a {
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    header nav li a {
+        font-size: 0.95rem !important;
+    }
+}
 
 h1 {
-  font-size: 4rem;
-  margin: 0; }
-  @media (max-width: 768px) {
+    font-size: 4rem;
+    margin: 0;
+}
+@media (max-width: 768px) {
     h1 {
-      font-size: 2rem; } }
+        font-size: 2rem;
+    }
+}
 
 h2 {
-  font-size: 3rem;
-  margin: 0; }
-  @media (max-width: 768px) {
+    font-size: 3rem;
+    margin: 0;
+}
+@media (max-width: 768px) {
     h2 {
-      font-size: 1.2rem; } }
+        font-size: 1.2rem;
+    }
+}
 
 p {
-  line-height: 2rem;
-  width: 100%;
-  max-width: 1200px; }
-  @media (max-width: 768px) {
+    line-height: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+@media (max-width: 768px) {
     p {
-      line-height: 1.2rem;
-      font-size: .8rem; } }
+        line-height: 1.6rem;
+        font-size: 1rem;
+    }
+}
 
 section {
-  height: 100vh; }
+    height: 100vh;
+}
 
 #about {
-  background: #f00088; }
-  #about > div {
-    padding-top: 10vh; }
-    @media (max-width: 768px) {
-      #about > div {
-        padding-top: 1vh; } }
-    #about > div h1 {
-      margin-top: 5rem; }
+    background: #f00088;
+}
+#about > div {
+    padding-top: 10vh;
+}
+@media (max-width: 768px) {
+    #about > div {
+        padding-top: 1vh;
+    }
+}
+#about > div h1 {
+    margin-top: 5rem;
+}
 
 #work {
-  background: #161b3a; }
+    background: #161b3a;
+}
 
 #projects {
-  background: #f00088; }
+    background: #f00088;
+}
 
 #contact {
-  background: #161b3a; }
+    background: #161b3a;
+}
 
 .content {
-  width: 80%;
-  margin-left: 10%;
-  padding-top: 10vh; }
-  @media (max-width: 768px) {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 10vh;
+}
+@media (max-width: 768px) {
     .content {
-      width: 90%;
-      margin-left: 5%;
-      margin-right: 5%; } }
-  .content ul li {
-    margin-bottom: .6rem;
-    margin-top: .6rem; }
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+.content ul li {
+    margin-bottom: 0.6rem;
+    margin-top: 0.6rem;
+}
+.content ul li a {
+    font-size: 1.2rem;
+    width: 80%;
+}
+@media (max-width: 768px) {
     .content ul li a {
-      font-size: 1.2rem;
-      width: 80%; }
-      @media (max-width: 768px) {
-        .content ul li a {
-          font-size: .92rem; } }
+        font-size: 0.92rem;
+    }
+}
 
 .active {
-  text-decoration: underline; }
+    text-decoration: underline;
+}
 
 .hide {
-  display: none; }
+    display: none;
+}
 
 /* #########
 ###############
 Overly styles
 */
 .overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(10, 20, 30, 0.9);
-  z-index: 1000; }
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(10, 20, 30, 0.9);
+    z-index: 1000;
+}
 
 .overlay .overlay-close {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  overflow: hidden;
-  border: none;
-  background: url(../img/cross.png) no-repeat center center;
-  text-indent: 200%;
-  color: transparent;
-  outline: none;
-  z-index: 100; }
-  @media (max-width: 768px) {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    overflow: hidden;
+    border: none;
+    background: url(../img/cross.png) no-repeat center center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+}
+@media (max-width: 768px) {
     .overlay .overlay-close {
-      width: 30px;
-      height: 30px; } }
+        width: 30px;
+        height: 30px;
+    }
+}
 
 .overlay-door {
-  visibility: hidden;
-  width: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%); }
+    visibility: hidden;
+    width: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
 
 .overlay-door.close {
-  transition: visibility 0s .8s, width 0.5s 0.3s;
-  -webkit-transition: visibility 0s .8s, width 0.5s 0.3s; }
+    transition: visibility 0s 0.8s, width 0.5s 0.3s;
+    -webkit-transition: visibility 0s 0.8s, width 0.5s 0.3s;
+}
 
 .overlay-door.open {
-  visibility: visible;
-  width: 100%;
-  -webkit-transition: width 0.5s, visibility 0s;
-  transition: width 0.5s, visibility 0s; }
+    visibility: visible;
+    width: 100%;
+    -webkit-transition: width 0.5s, visibility 0s;
+    transition: width 0.5s, visibility 0s;
+}
 
 .container {
-  position: absolute;
-  overflow: hidden;
-  max-width: 1000px;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 500px;
-  border: 2px solid white;
-  background-color: black;
-  /* controls */ }
-  .container h1 {
-    text-align: center; }
-  .container .slide {
+    position: absolute;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 500px;
+    border: 2px solid white;
+    background-color: black;
+    /* controls */
+}
+.container h1 {
+    text-align: center;
+}
+.container .slide {
     position: absolute;
     width: 100%;
     top: 15%;
-    height: 85%; }
-    .container .slide.inactive {
-      display: none; }
-    .container .slide h3 {
-      text-align: center;
-      text-transform: uppercase; }
-    .container .slide img {
-      width: 100%; }
+    height: 85%;
+}
+
+@media (max-width: 768px) {
+    .container .slide {
+        top: 8%;
+    }
+}
+.container .slide.inactive {
+    display: none;
+}
+.container .slide h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+.container .slide img {
+    width: 100%;
+}
+.container .slide .otherSlides {
+    float: left;
+    margin: 12px 7.5%;
+    width: 35%;
+    max-width: 350px;
+}
+@media (max-width: 768px) {
     .container .slide .otherSlides {
-      float: left;
-      margin: 12px 7.5%;
-      width: 35%;
-      max-width: 350px; }
-      @media (max-width: 768px) {
-        .container .slide .otherSlides {
-          display: none; } }
+        display: none;
+    }
+}
+.container .slide .description {
+    float: left;
+    margin: 0 7.5% 0 0;
+    width: 40%;
+}
+@media (max-width: 768px) {
     .container .slide .description {
-      float: left;
-      margin: 0 7.5% 0 0;
-      width: 40%; }
-      @media (max-width: 768px) {
-        .container .slide .description {
-          width: 75%;
-          margin-left: 12.5%; } }
-      .container .slide .description p {
-        margin: 0; }
-  .container .slideshow-control {
+        width: 75%;
+        margin-left: 12.5%;
+    }
+}
+.container .slide .description p {
+    margin: 0;
+}
+.container .slideshow-control {
     height: 100%;
     cursor: pointer;
     position: absolute;
     top: 0;
     width: 10%;
-    z-index: 1; }
-  .container .slideshow-control.slideshow-left-control {
-    left: -10px; }
-  .container .slideshow-control.slideshow-right-control {
-    right: -10px; }
-  .container .slideshow-control:hover .slideshow-arrow {
-    opacity: 0.7; }
-  .container .slideshow-control .slideshow-left-arrow {
+    z-index: 1;
+}
+.container .slideshow-control.slideshow-left-control {
+    left: -10px;
+}
+.container .slideshow-control.slideshow-right-control {
+    right: -10px;
+}
+.container .slideshow-control:hover .slideshow-arrow {
+    opacity: 0.7;
+}
+.container .slideshow-control .slideshow-left-arrow {
     left: 0;
     height: 60%;
     margin-top: -150%;
     opacity: 0.3;
     position: absolute;
-    top: 50%; }
-    @media (max-width: 768px) {
-      .container .slideshow-control .slideshow-left-arrow {
+    top: 50%;
+}
+@media (max-width: 768px) {
+    .container .slideshow-control .slideshow-left-arrow {
         top: 40%;
         height: 40%;
-        left: 5px; } }
-  .container .slideshow-control .slideshow-right-arrow {
+        left: 5px;
+    }
+}
+.container .slideshow-control .slideshow-right-arrow {
     right: 0;
     height: 60%;
     margin-top: -150%;
     opacity: 0.3;
     position: absolute;
-    top: 50%; }
-    @media (max-width: 768px) {
-      .container .slideshow-control .slideshow-right-arrow {
+    top: 50%;
+}
+@media (max-width: 768px) {
+    .container .slideshow-control .slideshow-right-arrow {
         top: 40%;
         height: 40%;
-        right: 5px; } }
+        right: 5px;
+    }
+}
